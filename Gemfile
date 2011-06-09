@@ -10,7 +10,7 @@ gem 'sqlite3'
 # Asset template engines
 gem 'sass'
 gem 'compass'
-gem 'haml'
+gem 'haml', '3.1.2'
 gem 'coffee-script'
 gem 'uglifier'
 
