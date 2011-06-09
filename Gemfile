@@ -9,10 +9,12 @@ gem 'sqlite3'
 
 # Asset template engines
 gem 'sass'
+gem 'haml'
 gem 'coffee-script'
 gem 'uglifier'
 
 gem 'jquery-rails'
+gem 'inherited_resources'
 
 # Use unicorn as the web server
 # gem 'unicorn'
