@@ -15,6 +15,7 @@ gem 'coffee-script'
 gem 'uglifier'
 
 gem 'jquery-rails'
+gem 'therubyracer'
 gem 'inherited_resources'
 
 # Use unicorn as the web server
