@@ -1,4 +1,16 @@
 = form_for resource do |f|
-  = f.label :data
-  = f.text_area :data
-  = f.submit
+  .qr_type
+    = radio_button_tag :type, :url
+    = label_tag :type_url, "URL"
+    = radio_button_tag :type, :tel
+    = label_tag :type_tel, "Phone"
+    = radio_button_tag :type, :sms
+    = label_tag :type_sms, "SMS"
+    = radio_button_tag :type, :email
+    = label_tag :type_email, "E-mail"
+
+  .qr_data
+    = f.text_field :data, :placeholder => "Enter your data here"
+
+  .submit
+    = f.submit
