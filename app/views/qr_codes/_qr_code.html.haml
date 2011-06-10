@@ -3,11 +3,13 @@
 - css_class = 'qr_code'
 - css_class += ' small' if small
 
-%table{:class => css_class}
-  - qr.modules.each_index do |x|
-    %tr
-      - qr.modules.each_index do |y|
-        - if qr.dark?(x, y)
-          %td.black
-        - else
-          %td.white
+%a{ :href => qr_code_path(qr_code), :class => 'qr_code_link' }
+  .qr_code_wrap
+    %table{:class => css_class}
+      - qr.modules.each_index do |x|
+        %tr
+          - qr.modules.each_index do |y|
+            - if qr.dark?(x, y)
+              %td.black
+            - else
+              %td.white

@@ -32,11 +32,23 @@ section.content,  {
   }
 }
 
+.qr_code_wrap {
+  width: auto;
+  border: solid 10px white;
+  display: inline-block;
+  margin: 20px;
+}
+
+.qr_code_link {
+  display: inline-block;
+  .qr_code_wrap:hover {
+    border-color: #f9a31a;
+  }
+}
+
 table.qr_code {
-  border: solid 5px white;
   border-collapse: collapse;
   display: inline-block;
-  margin: 10px;
   td {
     border-width: 0; 
     border-style: none;

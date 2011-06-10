@@ -4,3 +4,5 @@ log/*.log
 tmp/
 .redcar
 .rvmrc
+.idea
+.sass-cache

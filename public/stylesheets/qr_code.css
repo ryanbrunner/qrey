@@ -35,13 +35,28 @@ section.content .link {
 }
 
 /* line 35, ../../app/assets/stylesheets/qr_code.scss */
+.qr_code_wrap {
+  width: auto;
+  border: solid 10px white;
+  display: inline-block;
+  margin: 20px;
+}
+
+/* line 42, ../../app/assets/stylesheets/qr_code.scss */
+.qr_code_link {
+  display: inline-block;
+}
+/* line 44, ../../app/assets/stylesheets/qr_code.scss */
+.qr_code_link .qr_code_wrap:hover {
+  border-color: #f9a31a;
+}
+
+/* line 49, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code {
-  border: solid 5px white;
   border-collapse: collapse;
   display: inline-block;
-  margin: 10px;
 }
-/* line 40, ../../app/assets/stylesheets/qr_code.scss */
+/* line 52, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td {
   border-width: 0;
   border-style: none;
@@ -52,15 +67,15 @@ table.qr_code td {
   width: 10px;
   height: 10px;
 }
-/* line 49, ../../app/assets/stylesheets/qr_code.scss */
+/* line 61, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.black {
   background-color: black;
 }
-/* line 52, ../../app/assets/stylesheets/qr_code.scss */
+/* line 64, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.white {
   background-color: white;
 }
-/* line 57, ../../app/assets/stylesheets/qr_code.scss */
+/* line 69, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code.small td {
   width: 3px;
   height: 3px;
