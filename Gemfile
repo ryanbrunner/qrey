@@ -8,6 +8,7 @@ gem 'rails', '3.1.0.rc3'
 gem 'sqlite3'
 
 gem 'rqrcode'
+gem 'rmagick'
 
 # Asset template engines
 gem 'sass'
