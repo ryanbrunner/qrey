@@ -1,4 +1,4 @@
-/* line 1, ../../app/assets/stylesheets/qr_code.scss */
+/* line 3, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code {
   border-width: 0;
   border-width: 0;
@@ -8,7 +8,7 @@ table.qr_code {
   display: inline-block;
   margin: 10px;
 }
-/* line 9, ../../app/assets/stylesheets/qr_code.scss */
+/* line 11, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td {
   border-width: 0;
   border-style: none;
@@ -19,15 +19,15 @@ table.qr_code td {
   width: 10px;
   height: 10px;
 }
-/* line 18, ../../app/assets/stylesheets/qr_code.scss */
+/* line 20, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.black {
   background-color: black;
 }
-/* line 21, ../../app/assets/stylesheets/qr_code.scss */
+/* line 23, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.white {
   background-color: white;
 }
-/* line 26, ../../app/assets/stylesheets/qr_code.scss */
+/* line 28, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code.small td {
   width: 3px;
   height: 3px;
