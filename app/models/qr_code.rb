@@ -21,7 +21,7 @@ class QrCode < ActiveRecord::Base
 
   def to_png
     require 'qr_code_image'
-    code = QRCodeImage.new( self.data, :size => SIZE, :level => LEVEL )
+    code = QRCodeImage.new( self.data, SIZE, LEVEL )
     code.as_png
   end
 
