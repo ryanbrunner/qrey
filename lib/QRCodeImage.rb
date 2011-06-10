@@ -1,3 +1,6 @@
+# Simple class to construct QR images and return them as scaled PNG
+# image data.
+
 require 'rqrcode'
 require 'rmagick'
 
