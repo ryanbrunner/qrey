@@ -2,10 +2,15 @@ require 'rqrcode'
 require 'rmagick'
 
 class QRCodeImage
+
+  LEGAL_SIZES = [1, 2, 3, 4, 10, 40]
+  LEGAL_LEVELS = [:l, :m, :q, :h]
+
   def initialize(string, size, level)
-    @qr = RQRCode::QRCode.new(string, size, level)
+    @qr = RQRCode::QRCode.new(string, :size => size, :level => level)
   end
 
+  # returns the QR code as a PNG with each pixel scaled to scale x scale
   def as_png(scale=5)
     pixels = @qr.modules.size
 
