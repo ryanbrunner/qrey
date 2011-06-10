@@ -1,0 +1,29 @@
+table.qr_code {
+  border-width: 0;
+  border-width: 0;
+  border-style: none;
+  border-color: #0000ff;
+  border-collapse: collapse;
+  td {
+    border-width: 0; 
+    border-style: none;
+    border-color: #0000ff; 
+    border-collapse: collapse; 
+    padding: 0; 
+    margin: 0; 
+    width: 10px; 
+    height: 10px; 
+    &.black {
+      background-color: black;  
+    }
+    &.white {
+      background-color: white;
+    }  
+  }
+  &.small {
+    td {
+      width: 3px;
+      height: 3px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+- qr = qr_code.to_qr_code
+- small = "small"
+
+%table.qr_code.small
+  - qr.modules.each_index do |x|
+    %tr
+      - qr.modules.each_index do |y|
+        - if qr.dark?(x, y)
+          %td.black
+        - else
+          %td.white

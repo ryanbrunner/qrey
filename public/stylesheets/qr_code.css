@@ -1,0 +1,32 @@
+/* line 1, ../../app/assets/stylesheets/qr_code.scss */
+table.qr_code {
+  border-width: 0;
+  border-width: 0;
+  border-style: none;
+  border-color: #0000ff;
+  border-collapse: collapse;
+}
+/* line 7, ../../app/assets/stylesheets/qr_code.scss */
+table.qr_code td {
+  border-width: 0;
+  border-style: none;
+  border-color: #0000ff;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+  width: 10px;
+  height: 10px;
+}
+/* line 16, ../../app/assets/stylesheets/qr_code.scss */
+table.qr_code td.black {
+  background-color: black;
+}
+/* line 19, ../../app/assets/stylesheets/qr_code.scss */
+table.qr_code td.white {
+  background-color: white;
+}
+/* line 24, ../../app/assets/stylesheets/qr_code.scss */
+table.qr_code.small td {
+  width: 3px;
+  height: 3px;
+}
