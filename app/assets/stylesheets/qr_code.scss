@@ -4,6 +4,8 @@ table.qr_code {
   border-style: none;
   border-color: #0000ff;
   border-collapse: collapse;
+  display: inline-block;
+  margin: 10px;
   td {
     border-width: 0; 
     border-style: none;

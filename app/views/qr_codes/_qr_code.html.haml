@@ -1,7 +1,9 @@
 - qr = qr_code.to_qr_code
-- small = "small"
+- small ||= false
+- css_class = 'qr_code'
+- css_class += ' small' if small
 
-%table.qr_code.small
+%table{:class => css_class}
   - qr.modules.each_index do |x|
     %tr
       - qr.modules.each_index do |y|

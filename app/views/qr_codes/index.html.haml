@@ -7,4 +7,4 @@
 
 %section.recent
   %header Recent QR Codes
-  = render collection, :locals => { :small => true }
+  = render :partial => 'qr_codes/qr_code', :collection => collection, :locals => { :small => true }

@@ -5,8 +5,10 @@ table.qr_code {
   border-style: none;
   border-color: #0000ff;
   border-collapse: collapse;
+  display: inline-block;
+  margin: 10px;
 }
-/* line 7, ../../app/assets/stylesheets/qr_code.scss */
+/* line 9, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td {
   border-width: 0;
   border-style: none;
@@ -17,15 +19,15 @@ table.qr_code td {
   width: 10px;
   height: 10px;
 }
-/* line 16, ../../app/assets/stylesheets/qr_code.scss */
+/* line 18, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.black {
   background-color: black;
 }
-/* line 19, ../../app/assets/stylesheets/qr_code.scss */
+/* line 21, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.white {
   background-color: white;
 }
-/* line 24, ../../app/assets/stylesheets/qr_code.scss */
+/* line 26, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code.small td {
   width: 3px;
   height: 3px;
