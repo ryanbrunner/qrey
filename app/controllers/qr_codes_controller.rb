@@ -2,6 +2,10 @@ class QrCodesController < InheritedResources::Base
   actions :index, :new, :create, :show
   respond_to :html, :json, :xml, :png
 
+  def index
+    @qr_code = QrCode.first(:order => 'random()', :limit => 1)
+  end
+
   def create
     @qr_code = QrCode.initialize_for_type(params[:type], params[:qr_code])
     

@@ -1,7 +1,7 @@
 = form_for resource do |f|
   .qr_error
     - errors = ''
-    - @qr_code.errors.messages[:data].collect {|v| errors << v.to_s}
+    - @qr_code.errors.messages[:data].collect {|v| errors << v.to_s} unless @qr_code.errors.messages[:data].nil?
   .qr_type
     = radio_button_tag :type, :text, :selected
     = label_tag :type_text, "Text"
