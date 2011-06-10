@@ -19,6 +19,12 @@ class QrCode < ActiveRecord::Base
     code
   end
 
+  def to_png
+    require 'qr_code_image'
+    code = QRCodeImage.new( self.data, :size => SIZE, :level => LEVEL )
+    code.as_png
+  end
+
   def to_qr_code
     RQRCode::QRCode.new( self.data, :size => SIZE, :level => LEVEL )
   end

@@ -50,5 +50,7 @@ module Qrey
 
     # Enable the asset pipeline
     config.assets.enabled = true
+
+    Mime::Type.register "image/png", :png
   end
 end

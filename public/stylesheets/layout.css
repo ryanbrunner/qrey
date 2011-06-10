@@ -4,22 +4,23 @@ body {
   color: #EEE;
   margin: 0px;
   text-align: center;
+  font-family: 'Lato';
 }
 
-/* line 7, ../../app/assets/stylesheets/layout.scss */
+/* line 8, ../../app/assets/stylesheets/layout.scss */
 header {
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.3);
   text-shadow: black 1px -2px 0;
   margin-bottom: 20px;
 }
-/* line 12, ../../app/assets/stylesheets/layout.scss */
+/* line 13, ../../app/assets/stylesheets/layout.scss */
 header h1 {
-  font-family: 'Ultra';
+  font-family: 'Pacifico';
   font-weight: normal;
   margin: 0;
 }
-/* line 17, ../../app/assets/stylesheets/layout.scss */
+/* line 18, ../../app/assets/stylesheets/layout.scss */
 header h2 {
   margin: 0;
 }
