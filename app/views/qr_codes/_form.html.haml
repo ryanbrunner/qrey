@@ -1,4 +1,7 @@
 = form_for resource do |f|
+  .qr_error
+    - errors = ''
+    - @qr_code.errors.messages[:data].collect {|v| errors << v.to_s}
   .qr_type
     = radio_button_tag :type, :text, :selected
     = label_tag :type_text, "Text"
@@ -12,6 +15,7 @@
     = label_tag :type_email, "E-mail"
   %br
     .qr_data
+      = errors
       = f.text_area :data, :placeholder => "Enter your data here", :size => 50
   %br
     .qr_options
