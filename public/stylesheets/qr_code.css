@@ -64,8 +64,8 @@ table.qr_code td {
   border-collapse: collapse;
   padding: 0;
   margin: 0;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
 }
 /* line 61, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.black {

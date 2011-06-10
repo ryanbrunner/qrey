@@ -1,31 +1,36 @@
 class QrCode < ActiveRecord::Base
-  validates :data, :presence => true
+  attr_accessible :data, :size, :level
 
-  LEVEL = :h
-  SIZE = 4
+  validates :data, :size, :level, :presence => true
+
+#  LEVEL = :h
+#  SIZE = 4
 
   def self.initialize_for_type(type, params)
     code = new(params)
     case type
-    when 'tel'
-      code.data = "tel:#{code.data}"
-    when 'email'
-      code.data = "mailto:#{code.data}"
-    when 'url'
-      code.data = "http://#{code.data}" unless code.data.starts_with? 'http://'
-    when 'sms'
-      code.data = "sms:#{code.data}"
-    end
-    code
+      when 'text'
+        code.data
+      when 'tel'
+        code.data = "tel:#{code.data}"
+      when 'email'
+        code.data = "mailto:#{code.data}"
+      when 'url'
+        code.data = "http://#{code.data}" unless code.data.starts_with? 'http://'
+      when 'sms'
+        code.data = "sms:#{code.data}"
+      end
+      code
   end
 
   def to_png
     require 'qr_code_image'
-    code = QRCodeImage.new( self.data, SIZE, LEVEL )
+    code = QRCodeImage.new( self.data, self.size, self.level.level.downcase.to_sym )
     code.as_png
   end
 
   def to_qr_code
-    RQRCode::QRCode.new( self.data, :size => SIZE, :level => LEVEL )
+    RQRCode::QRCode.new( self.data, :size => self.size, :level => self.level.downcase.to_sym )
   end
+
 end
