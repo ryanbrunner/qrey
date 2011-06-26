@@ -26,7 +26,7 @@ class QrCodesController < InheritedResources::Base
 
   def show
     show! do |format|
-      format.png { send_data resource.to_png, :type => 'image/png', :disposition => 'inline' }
+      format.png { send_data resource.to_png, :type => 'image/png', :disposition => 'attachment' }
     end
   end
 end

@@ -7,7 +7,12 @@ section.content {
   margin: 15px;
 }
 /* line 7, ../../app/assets/stylesheets/qr_code.scss */
-section.content a, section.content input[type='submit'] {
+section.content .link {
+  margin-top: 15px;
+}
+
+/* line 12, ../../app/assets/stylesheets/qr_code.scss */
+a.button, input[type='submit'] {
   font-size: 1.5em;
   display: inline-block;
   outline: none;
@@ -28,10 +33,6 @@ section.content a, section.content input[type='submit'] {
   background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
   background: -moz-linear-gradient(top, #faa51a, #f47a20);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
-}
-/* line 29, ../../app/assets/stylesheets/qr_code.scss */
-section.content .link {
-  margin-top: 15px;
 }
 
 /* line 35, ../../app/assets/stylesheets/qr_code.scss */

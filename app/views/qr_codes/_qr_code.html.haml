@@ -14,3 +14,6 @@
                 %td.black
               - else
                 %td.white
+
+  %p
+    = link_to 'Download PNG Image', "#{url_for qr_code}.png", :class => 'download_qr_image button'
