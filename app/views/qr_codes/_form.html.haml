@@ -1,6 +1,6 @@
 = form_for resource do |f|
   .qr_error
-    - errors = 'QR '
+    - errors = ''
     - @qr_code.errors.messages[:data].each { |v| errors << v.to_s + '<br/>' } unless @qr_code.errors.messages[:data].nil?
   .qr_type
     = radio_button_tag :type, :text, :selected

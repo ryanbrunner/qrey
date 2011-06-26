@@ -34,3 +34,12 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
+
+# for herku's sake!
+group :development, :test do
+  gem 'therubyracer'
+end
+
+group :production do
+  gem 'therubyracer-heroku'
+end
