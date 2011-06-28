@@ -1,7 +1,7 @@
 = form_for resource do |f|
   .qr_error
     - errors = ''
-    - @qr_code.errors.messages[:data].each { |v| errors << v.to_s + '<br/>' } unless @qr_code.errors.messages[:data].nil?
+    - resource.errors.messages[:data].each { |v| errors << v.to_s + '<br/>' } unless resource.errors.messages[:data].nil?
   .qr_type
     = radio_button_tag :type, :text, :selected
     = label_tag :type_text, "Text"
@@ -13,14 +13,21 @@
     = label_tag :type_sms, "SMS"
     = radio_button_tag :type, :email
     = label_tag :type_email, "E-mail"
-  %br
-    .qr_data
-      != errors
-      = f.text_area :data, :placeholder => "Enter your data here", :size => 50
-  %br
-    .qr_options
-      = f.select :size, options_for_select({'Version 1, 21x21, 10-25 chars' => 1, 'Version 2, 25x25, 20-47 chars' => 2, 'Version 3, 29x29, 35-77 chars' => 3, 'Version 4, 33x33, 67-114 chars' => 4, 'Version 10, 57x57, 174-395 chars' => 10, 'Version 40, 177x177, 1852-4296 chars' => 40}, 4)
-      = f.select :level, options_for_select({'S' => :l, 'M' => :m, 'L' => :q, 'XL' => :h})
-  %br
-    .submit
-      = f.submit
+  %br/
+  .qr_data
+    != errors
+    = f.text_area :data, :placeholder => "Enter your data here", :size => 50
+  %br/
+  .char_counter
+  %br/
+  .qr_options
+    = f.select :size, options_for_select({'Version 1, 21x21, 10-25 chars' => 1, 
+                                          'Version 2, 25x25, 20-47 chars' => 2, 
+                                          'Version 3, 29x29, 35-77 chars' => 3, 
+                                          'Version 4, 33x33, 67-114 chars' => 4, 
+                                          'Version 10, 57x57, 174-395 chars' => 10, 
+                                          'Version 40, 177x177, 1852-4296 chars' => 40}, 4)
+    = f.select :level, options_for_select({'L' => :l, 'M' => :m, 'Q' => :q, 'H' => :h}, :h)
+  %br/
+  .submit
+    = f.submit

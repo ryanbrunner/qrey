@@ -3,3 +3,7 @@
  *= require_self
  *= require_tree . 
 */
+
+section {
+  display: block;
+}

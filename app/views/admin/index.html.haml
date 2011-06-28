@@ -1,0 +1,10 @@
+%section.content
+  %h1 All QR codes
+  
+  %table
+    - for qr in @qr_codes
+      %tr
+        %td= qr.id
+        %td= qr.data
+        %td= link_to 'Edit', edit_qr_code_path(qr)
+        %td= link_to 'Delete', qr, :confirm => 'Are you sure?', :method => :delete

@@ -19,7 +19,8 @@ a.button, input[type='submit'] {
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  padding: .5em 2em .55em;
+  /*    padding: .5em 2em .55em;*/
+  padding: 10px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: .5em;
   -moz-border-radius: .5em;
@@ -34,8 +35,13 @@ a.button, input[type='submit'] {
   background: -moz-linear-gradient(top, #faa51a, #f47a20);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
 }
+/* line 34, ../../app/assets/stylesheets/qr_code.scss */
+a.button.small, input[type='submit'].small {
+  padding: 5;
+  font-size: 1em;
+}
 
-/* line 35, ../../app/assets/stylesheets/qr_code.scss */
+/* line 40, ../../app/assets/stylesheets/qr_code.scss */
 .qr_code_wrap {
   width: auto;
   border: solid 10px white;
@@ -43,21 +49,21 @@ a.button, input[type='submit'] {
   margin: 20px;
 }
 
-/* line 42, ../../app/assets/stylesheets/qr_code.scss */
+/* line 47, ../../app/assets/stylesheets/qr_code.scss */
 .qr_code_link {
   display: inline-block;
 }
-/* line 44, ../../app/assets/stylesheets/qr_code.scss */
+/* line 49, ../../app/assets/stylesheets/qr_code.scss */
 .qr_code_link .qr_code_wrap:hover {
   border-color: #f9a31a;
 }
 
-/* line 49, ../../app/assets/stylesheets/qr_code.scss */
+/* line 54, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code {
   border-collapse: collapse;
   display: inline-block;
 }
-/* line 52, ../../app/assets/stylesheets/qr_code.scss */
+/* line 57, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td {
   border-width: 0;
   border-style: none;
@@ -68,15 +74,15 @@ table.qr_code td {
   width: 5px;
   height: 5px;
 }
-/* line 61, ../../app/assets/stylesheets/qr_code.scss */
+/* line 66, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.black {
   background-color: black;
 }
-/* line 64, ../../app/assets/stylesheets/qr_code.scss */
+/* line 69, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code td.white {
   background-color: white;
 }
-/* line 69, ../../app/assets/stylesheets/qr_code.scss */
+/* line 74, ../../app/assets/stylesheets/qr_code.scss */
 table.qr_code.small td {
   width: 3px;
   height: 3px;

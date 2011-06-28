@@ -1,5 +1,11 @@
-class QrCodesController < InheritedResources::Base
-  actions :index, :new, :create, :show
+class QrCodesController < ApplicationController
+  inherit_resources
+  
+  http_basic_authenticate_with :name => ADMIN_CONFIG['user'], 
+                               :password => ADMIN_CONFIG['pass'], 
+                               :only => [:edit, :update, :destroy]
+                               
+  actions :index, :new, :create, :show, :edit, :destroy
   respond_to :html, :json, :xml, :png
 
   def index
@@ -29,4 +35,35 @@ class QrCodesController < InheritedResources::Base
       format.png { send_data resource.to_png, :type => 'image/png', :disposition => 'attachment' }
     end
   end
+  
+  def update
+    if resource.update_attributes params[:qr_code]
+      respond_to do |format|
+        flash[:notice] = "Successfully updated."
+        format.html { redirect_to :controller => :admin, :action => :index }
+      end
+    else
+      respond_to do |format|
+        logger.debug @qr_code.errors.messages.inspect
+        flash[:error] = "An error occurred when trying to update."
+        format.html { render :edit }
+      end
+    end
+  end
+  
+  def destroy
+    if resource.destroy
+      respond_to do |format|
+        flash[:notice] = 'Successdully deleted entry.'
+        format.html { redirect_to :controller => :admin, :action => :index }
+      end
+    else
+      respond_to do |format|
+        logger.debug @qr_code.errors.messages.inspect
+        flash[:error] = 'An error occurred when trying to delete entry.'
+        format.html { redirect_to :controller => :admin, :action => :index }
+      end
+    end
+  end
+  
 end
