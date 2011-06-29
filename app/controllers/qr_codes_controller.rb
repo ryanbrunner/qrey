@@ -9,7 +9,8 @@ class QrCodesController < ApplicationController
   respond_to :html, :json, :xml, :png
 
   def index
-    @qr_code = QrCode.offset(rand(QrCode.count)).first
+    rand_id = rand(QrCode.count)
+    @qr_code = QrCode.first(:conditions => [ "id >= ?", rand_id]) unless rand_id.blank?
   end
 
   def create
