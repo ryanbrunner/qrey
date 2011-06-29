@@ -31,8 +31,8 @@ set :domain,      "yup.la"
 set :repository,  "ssh://#{domain}/~/#{application}.git"
 set :use_sudo,    true
 set :user, "victorstan"  # The server's user for deploys
-set :scm_username, "victorbstan"
-set :scm_passphrase, "l1n0d3p455"  # The deploy user's password
+set :scm_username, "passenger"
+set :scm_passphrase, "p4553ng3rp455"  # The deploy user's password
 set :deploy_to,   "/srv/www/#{application}"
 set :branch, "victor"
 set :deploy_via, :remote_cache
