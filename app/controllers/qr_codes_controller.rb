@@ -9,7 +9,7 @@ class QrCodesController < ApplicationController
   respond_to :html, :json, :xml, :png
 
   def index
-    @qr_code = QrCode.first(:order => 'random()', :limit => 1)
+    @qr_code = QrCode.order("RANDOM()").first
   end
 
   def create
