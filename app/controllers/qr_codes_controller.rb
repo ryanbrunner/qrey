@@ -33,7 +33,7 @@ class QrCodesController < ApplicationController
 
   def show
     show! do |format|
-      format.png { send_file resource.to_png, :type => 'image/png', :disposition => 'attachment' }
+      format.png { send_data resource.to_png, :type => 'image/png', :disposition => 'attachment' }
     end
   end
   
