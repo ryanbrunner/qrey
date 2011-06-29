@@ -41,7 +41,8 @@ group :development, :test do
 end
 
 group :production do
-  gem 'therubyracer-heroku'
+  gem 'therubyracer'
+  # gem 'therubyracer-heroku'
   # gem 'pg'
   gem 'mysql2'
 end
