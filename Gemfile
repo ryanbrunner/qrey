@@ -42,5 +42,6 @@ end
 
 group :production do
   gem 'therubyracer-heroku'
-  gem 'pg'
+  # gem 'pg'
+  gem 'mysql2'
 end
