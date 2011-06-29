@@ -37,6 +37,7 @@ end
 group :development, :test do
   gem 'therubyracer'
   gem 'sqlite3'
+  gem 'capistrano'
 end
 
 group :production do
