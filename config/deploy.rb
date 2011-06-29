@@ -25,10 +25,10 @@
 #set :default_stage, "production"
 require 'bundler/capistrano'
 
-set :application, "launch_page"
-set :domain,      "launch_page.me"
+set :application, "qrey"
+set :domain,      "yup.la"
 #set :repository,  "ssh://#{domain}/~/#{application}.git"
-set :repository,  "ssh://#{domain}/~/#{application}.git"
+set :repository,  "ssh://#{domain}:~/#{application}.git"
 set :use_sudo,    true
 set :user, "victorstan"  # The server's user for deploys
 set :scm_username, "passenger"
