@@ -45,4 +45,5 @@ group :production do
   # gem 'therubyracer-heroku'
   # gem 'pg'
   gem 'mysql2'
+  # gem 'activerecord-mysql-adapter'
 end
