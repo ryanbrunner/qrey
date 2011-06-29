@@ -6,7 +6,7 @@
 # * http://www.qrcode.com/index-e.html
 class QRCodeImage
   require 'rqrcode'
-  require 'rmagick'
+  require 'RMagick'
 
   # Creates a new QRCodeImage object.
   #
