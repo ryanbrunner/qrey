@@ -9,7 +9,12 @@
 %body
   %header 
     %h1= link_to 'QRey!', root_path
-    %h2 Your one-stop shop for QR codes.
+    %h2 
+      Your one-stop shop for QR codes.
+      %sup
+        %small
+          %i= mail_to 'victor.stan@specificidea.com?Subject=Bug Report', 'Beta'
+      
   = yield
 
 :javascript
