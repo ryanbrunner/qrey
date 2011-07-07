@@ -11,14 +11,14 @@ class QRCodeImage
   # Creates a new QRCodeImage object.
   #
   # +string+:: the data to be encoded
-  # +version+:: the version of the QR code (1 .. 40) 
+  # +version+:: the version of the QR code (1 .. 40)
   # +level+:: ecc level (:l, :m, :q, :h)
   def initialize(string, version, level)
     @qr = RQRCode::QRCode.new(string, :size => version, :level => level)
   end
 
   # Returns the QR code as a blob of PNG data.
-  # 
+  #
   # +scale+:: the number of pixels wide & deep to render each QR Code module
   def as_png(scale=5)
     pixels = @qr.modules.size
@@ -29,7 +29,7 @@ class QRCodeImage
 
     pixels.times do |x|
       pixels.times do |y|
-        if @qr.dark?(x,y)
+        if @qr.dark?(y,x)
           img.pixel_color(x, y, 'black')
         end
       end
